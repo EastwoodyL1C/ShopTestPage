@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 1440px;
+    height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 252px auto;
+    background: rgba(230, 230, 230, 0.8);
+    backdrop-filter: blur(42px);
+}
+/* sidebar start*/
+.sidebar {
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.sidebar__links li {
+    margin-bottom: 30px;
+}
+
+.sidebar__links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 15.7099px;
+    line-height: 19px;
+}
+
+.sidebar__links img{
+    margin-right: 10px;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.sidebar__Logo {
+    padding: 51px 96px 57px 56px;
+}
+.sidebar__Logo img {
+    display: flex;
+    text-align: center;
+}
+
+.sidebar__head {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 56px;
+    text-align: center;
+}
+
+.sidebar__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+/*sidebar end*/
+.main__body {
+    max-width: 1188px;
+}
+/*navigation start*/
+.nav {
+    padding: 46px 40px 0px 40px;
+}
+.nav a {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000000;
+    text-decoration: none;
+}
+.nav__links {
+    display: flex;
+    justify-content: end
+}
+.nav__links__text {
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    gap: 42px;
+    list-style: none;
+}
+.nav__links__icon {
+    padding: 0px 12px;
+    display: flex;
+    gap: 32px;
+}
+
+.material-symbols-outlined {
+}
+/*navigation end*/
+/*main block start*/
+.main {
+    padding: 76px 40px;
+}
+
+.img1 {
+    grid-area: img1;
+}
+.img2 {
+    grid-area: img2;
+}
+.img3 {
+    grid-area: img3;
+}
+.img4 {
+    grid-area: img4;
+}
+.img5 {
+    grid-area: img5;
+}
+.img6 {
+    grid-area: img6;
+}
+.img7 {
+    grid-area: img7;
+}
+.img8 {
+    grid-area: img8;
+}
+
+.main__menu {
+    display: grid;
+    gap: 21px;
+    grid-template-areas: 
+    "img1 img1 img3 img4"
+    "img2 img2 img3 img4"
+    "img5 img6 img7 img7"
+    "img5 img6 img8 img8";
+}
+/*main block start*/
