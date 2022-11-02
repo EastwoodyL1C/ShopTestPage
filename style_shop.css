@@ -9,7 +9,7 @@ body {
 
 .wrapper {
     max-width: 1440px;
-    height: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: 252px auto;
     background: rgba(230, 230, 230, 0.8);
@@ -252,6 +252,7 @@ body {
     }
     input:checked~.sidebar__links {
         transform: translateX(0);
+    }
 /* ###############################################################*/
     /*sidebar button end*/
 }
