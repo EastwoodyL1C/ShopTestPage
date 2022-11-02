@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!--person icon  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <!--menu-nav icon  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!--menu-sidebar icon  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style_shop.css">
 </head>
 <body>
@@ -33,15 +37,28 @@
         <div class="main__body">
             <nav class="nav">
                 <ul class="nav__links">
-                    <div class="nav__links__text">
-                        <li><a href="/">products</a></li>
-                        <li><a href="/">story</a></li>
-                        <li><a href="/">manufacturing</a></li>
-                        <li><a href="/">packaging</a></li>
-                    </div>
+                    <nav class="nav__sidebar__shortcut">
+                        <label for="menu-sidebar__shortcut">
+                        <span class="material-symbols-outlined">manage_search</span>
+                        </label>
+                        <input id="menu-sidebar__shortcut" type="checkbox" checked="checked">
+                        <img src="img\sidebarLogo.png" alt="CapedLogo" class="mobileLogo">
+                    </nav>
+                    <nav class="nav__links__text">
+                        <ul>
+                            <li><a href="/">products</a></li>
+                            <li><a href="/">story</a></li>
+                            <li><a href="/">manufacturing</a></li>
+                            <li><a href="/">packaging</a></li>
+                        </ul>
+                    </nav>
                     <ul class="nav__links__icon">
                         <span class="material-symbols-outlined">shopping_cart_checkout</span>
                         <span class="material-symbols-outlined">person</span>
+                        <label for="menu-nav">
+                            <span class="material-symbols-outlined">menu</span>
+                        </label>
+                        <input id="menu-nav" type="checkbox" checked="checked">
                     </ul>
                 </ul>
             </nav>

@@ -5,11 +5,10 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    max-width: 1440px;
-    height: 100%;
 }
 
 .wrapper {
+    max-width: 1440px;
     height: 100%;
     display: grid;
     grid-template-columns: 252px auto;
@@ -65,6 +64,7 @@ body {
 /*sidebar end*/
 .main__body {
     max-width: 1188px;
+    width: 100%;
 }
 /*navigation start*/
 .nav {
@@ -77,11 +77,14 @@ body {
     color: #000000;
     text-decoration: none;
 }
+.mobileLogo {
+    display: none;
+}
 .nav__links {
     display: flex;
     justify-content: end
 }
-.nav__links__text {
+.nav__links__text ul{
     display: flex;
     justify-content: end;
     flex-direction: row;
@@ -93,9 +96,19 @@ body {
     display: flex;
     gap: 32px;
 }
-
-.material-symbols-outlined {
+.nav__sidebar__shortcut label{
+    display: none;
 }
+.nav__sidebar__shortcut input{
+    display: none;
+}
+.nav__links__icon label {
+    display: none;
+}
+.nav__links__icon input {
+    display: none;
+}
+
 /*navigation end*/
 /*main block start*/
 .main {
@@ -136,4 +149,109 @@ body {
     "img5 img6 img7 img7"
     "img5 img6 img8 img8";
 }
-/*main block start*/
+/*main block end*/
+/*media block start*/
+@media (max-width:1440px) {
+    .main__menu {
+        display: grid;
+        gap: 21px;
+        grid-template-areas: 
+        "img1 img1"
+        "img2 img2"
+        "img3 img4"
+        "img3 img4"
+        "img5 img6"
+        "img5 img6"
+        "img7 img7"
+        "img8 img8";
+        justify-content: center;
+    }
+}
+
+@media (max-width:970px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 0px auto;
+        background: rgba(230, 230, 230, 0.8);
+        backdrop-filter: blur(42px);
+        justify-content: center;
+    }
+   /*nav button start*/
+    .nav__links__text {
+        position: fixed;
+        top: 60px;
+        right: 500px;
+        width: 200px;
+        background: #afafaf;
+        transform: translateX(200%);
+        padding: 30px 0px 30px 0px;
+        transition: .3 all ease-in-out;
+        text-decoration: underline;
+    }
+    .nav__links__icon {
+        position: fixed;
+        top: 60px;
+        right: 35px;
+    }
+    .nav__links__text ul {
+        flex-direction: column;
+    }
+    .nav__links__icon label {
+        display: block;
+        cursor: pointer;
+    }
+    input:checked~.nav__links__text {
+        transform: translateX(0);
+    }
+    /*nav button end*/
+    .main {
+        padding: 60px 0px;
+    }
+    .main__menu {
+        display: grid;
+        gap: 20px;
+        grid-template-areas: 
+        "img1 img1"
+        "img2 img2"
+        "img3 img4"
+        "img3 img4"
+        "img5 img6"
+        "img5 img6"
+        "img7 img7"
+        "img8 img8";
+        justify-content: center;
+    }
+    /*sidebar button start*/
+    .sidebar {
+        display: none;
+    }
+    .nav__sidebar__shortcut label{
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 48px;
+        cursor: pointer;
+    }
+    .nav__sidebar__shortcut img {
+        display: block;
+        position: fixed;
+        top: 50px;
+        left: 140px;
+    }
+/* ###############################################################*/
+    .sidebar__links {
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 0px;
+        width: 200px;
+        background: #afafaf;
+        transform: translateX(-200%);
+        padding: 30px 0px 30px 0px;
+        transition: .3 all ease-in-out;
+    }
+    input:checked~.sidebar__links {
+        transform: translateX(0);
+/* ###############################################################*/
+    /*sidebar button end*/
+}
