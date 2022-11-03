@@ -14,6 +14,7 @@ body {
     grid-template-columns: 252px auto;
     background: rgba(230, 230, 230, 0.8);
     backdrop-filter: blur(42px);
+    margin: auto;
 }
 /* sidebar start*/
 .sidebar {
@@ -96,10 +97,10 @@ body {
     display: flex;
     gap: 32px;
 }
-.nav__sidebar__shortcut label{
+.nav__sidebar label{
     display: none;
 }
-.nav__sidebar__shortcut input{
+.nav__sidebar input{
     display: none;
 }
 .nav__links__icon label {
@@ -180,13 +181,15 @@ body {
     .nav__links__text {
         position: fixed;
         top: 60px;
-        right: 500px;
+        right: 00px;
         width: 200px;
         background: #afafaf;
-        transform: translateX(200%);
+        border-radius: 10%;
+        transform: translateX(-50%);
         padding: 30px 0px 30px 0px;
-        transition: .3 all ease-in-out;
+        transition: all .2s ease-in-out;
         text-decoration: underline;
+        z-index: 1;
     }
     .nav__links__icon {
         position: fixed;
@@ -200,8 +203,9 @@ body {
         display: block;
         cursor: pointer;
     }
-    input:checked~.nav__links__text {
+    .nav__links:has(#menu-nav:checked) .nav__links__text {
         transform: translateX(0);
+        visibility: hidden;
     }
     /*nav button end*/
     .main {
@@ -225,14 +229,14 @@ body {
     .sidebar {
         display: none;
     }
-    .nav__sidebar__shortcut label{
+    .nav__sidebar label{
         display: block;
         position: fixed;
         top: 60px;
         left: 48px;
         cursor: pointer;
     }
-    .nav__sidebar__shortcut img {
+    .nav__sidebar img {
         display: block;
         position: fixed;
         top: 50px;
@@ -240,18 +244,21 @@ body {
     }
 /* ###############################################################*/
     .sidebar__links {
-        display: block;
         position: fixed;
         top: 60px;
         left: 0px;
         width: 200px;
         background: #afafaf;
-        transform: translateX(-200%);
+        border-radius: 10%;
+        transform: translateX(50%);
         padding: 30px 0px 30px 0px;
-        transition: .3 all ease-in-out;
+        transition: all .2s ease-in-out;
+        text-decoration: underline;
+        z-index: 1;
     }
-    input:checked~.sidebar__links {
+    .wrapper:has(#menu-sidebar:checked) .sidebar__links {
         transform: translateX(0);
+        visibility: hidden;
     }
 /* ###############################################################*/
     /*sidebar button end*/
