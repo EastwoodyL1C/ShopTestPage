@@ -154,6 +154,7 @@ body {
 /*media block start*/
 @media (max-width:1440px) {
     .main__menu {
+        max-width: 100%;
         display: grid;
         gap: 21px;
         grid-template-areas: 
@@ -171,6 +172,7 @@ body {
 
 @media (max-width:970px) {
     .wrapper {
+        max-width: 100%;
         display: grid;
         grid-template-columns: 0px auto;
         background: rgba(230, 230, 230, 0.8);
