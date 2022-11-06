@@ -5,6 +5,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    background: #323131;
 }
 
 .wrapper {
@@ -13,13 +14,16 @@ body {
     display: grid;
     grid-template-columns: 252px auto;
     background: rgba(230, 230, 230, 0.8);
-    backdrop-filter: blur(42px);
     margin: auto;
+    overflow-x: hidden;
+}
+.wrapper a:hover {
+    transform: translateY(-1px);
 }
 /* sidebar start*/
 .sidebar {
     background: #FFFFFF;
-    border-radius: 20px;
+    border-radius: 0px 20px 20px 0px;
 }
 
 .sidebar__links li {
@@ -56,11 +60,15 @@ body {
     text-align: center;
 }
 
-.sidebar__links {
+.sidebar__links ul{
     list-style: none;
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+}
+.sidebar__links li:hover {
+    text-decoration: underline;
+    transform: translateY(-1px);
 }
 /*sidebar end*/
 .main__body {
@@ -84,6 +92,10 @@ body {
 .nav__links {
     display: flex;
     justify-content: end
+}
+.nav__links__text li:hover {
+    text-decoration: underline;
+    transform: translateY(-1px);
 }
 .nav__links__text ul{
     display: flex;
@@ -183,11 +195,10 @@ body {
     .nav__links__text {
         position: fixed;
         top: 60px;
-        right: 00px;
+        right: 90px;
         width: 200px;
         background: #afafaf;
         border-radius: 10%;
-        transform: translateX(-50%);
         padding: 30px 0px 30px 0px;
         transition: all .2s ease-in-out;
         text-decoration: underline;
@@ -206,8 +217,7 @@ body {
         cursor: pointer;
     }
     .nav__links:has(#menu-nav:checked) .nav__links__text {
-        transform: translateX(0);
-        visibility: hidden;
+        transform: translateX(200%);
     }
     /*nav button end*/
     .main {
@@ -258,9 +268,8 @@ body {
         text-decoration: underline;
         z-index: 1;
     }
-    .wrapper:has(#menu-sidebar:checked) .sidebar__links {
+    .wrapper:has(#menu-sidebar:checked) .sidebar__links li {
         transform: translateX(0);
-        visibility: hidden;
     }
 /* ###############################################################*/
     /*sidebar button end*/
